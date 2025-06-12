@@ -1,13 +1,10 @@
-from functions.get_files_info import get_files_info
+from functions.get_file_content import get_file_content
 
-print("Test 1: calculator, .")
-print(get_files_info("calculator", "."))
+print("Test 1: calculator, lorem.txt")
+print(get_file_content("calculator", "main.py"))
 
-print("Test 2: calculator, pkg")
-print(get_files_info("calculator", "pkg"))
+print("Test 2: calculator, pkg/calculator.py")
+print(get_file_content("calculator", "pkg/calculator.py"))
 
-print("Test 3: calculator, /bin")
-print(get_files_info("calculator", "/bin"))
-
-print("Test 4: calculator, ../")
-print(get_files_info("calculator", "../"))
+print("Test 3: calculator, /bin/cat")
+print(get_file_content("calculator", "/bin/cat"))
