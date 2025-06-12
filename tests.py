@@ -1,10 +1,13 @@
-from functions.get_file_content import get_file_content
+from functions.run_python import run_python_file
 
-print("Test 1: calculator, lorem.txt")
-print(get_file_content("calculator", "main.py"))
+print("~~~ Test 1 ~~~")
+print(run_python_file("calculator", "main.py"))
 
-print("Test 2: calculator, pkg/calculator.py")
-print(get_file_content("calculator", "pkg/calculator.py"))
+print("~~~ Test 2 ~~~")
+print(run_python_file("calculator", "tests.py"))
 
-print("Test 3: calculator, /bin/cat")
-print(get_file_content("calculator", "/bin/cat"))
+print("~~~ Test 3 ~~~")
+print(run_python_file("calculator", "../main.py"))
+
+print("~~~ Test 4 ~~~")
+print(run_python_file("calculator", "nonexistent.py"))
